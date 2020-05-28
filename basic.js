@@ -100,3 +100,95 @@ function divide(){
     document.querySelector(".hasil").innerHTML = hasil;
 }
 
+// Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit
+let suhu, resSuhu;
+function toCelc(){
+    suhu = document.getElementById("suhu").value;
+    resSuhu = (suhu-32)*5/9;
+    document.querySelector(".ten").innerHTML = "Suhu "+resSuhu+ "&#8451";
+}
+function toFahr(){
+    suhu = document.getElementById("suhu").value;
+    resSuhu = (9*suhu/5)+32;
+    document.querySelector(".ten").innerHTML = "Suhu "+resSuhu+ "&#8457";
+}
+
+// Write a JavaScript program to get the difference between a given number and 13, if the number is greater than 13 return double the absolute difference. 
+let resNum;
+function eleven(){
+    cekNum = prompt("Masukkan angka!");
+    if (cekNum<=13){
+        resNum = 13-cekNum;
+        document.querySelector(".eleven").innerHTML = resNum;
+    } else {
+        resNum = 2*(cekNum-13);
+        document.querySelector(".eleven").innerHTML = resNum;
+    }
+}
+
+// Write a JavaScript program to compute the sum of the two given integers. If the two values are same, then returns triple their sum
+function sum(){
+    let numC = document.getElementById("numC").value;
+    let numD = document.getElementById("numD").value;
+    numC = parseInt(numC);
+    numD = parseInt(numD);
+    if (numC===numD){
+        let hasil = 3*(numC+numD);
+        document.querySelector(".eleven").innerHTML = hasil;
+    } else {
+        let hasil = numC+numD;
+        document.querySelector(".eleven").innerHTML = hasil;
+    }
+}
+
+// Write a JavaScript program to create a new string adding "Py" in front of a given string. If the given string begins with "Py" then return the original string.
+function twelve(){
+    let myStr = prompt("Masukkan satu kata!");
+    let myStrArr = myStr.split('');
+    if (myStrArr[0]==='P' && myStrArr[1]==='y'){
+        let resStr = myStr;
+        document.querySelector(".twelve").innerHTML = resStr;
+    }  else {
+        let resStr = "Py"+myStr;
+        document.querySelector(".twelve").innerHTML = resStr;
+    }
+}
+
+// Write a JavaScript program to remove a character at the specified position of a given string and return the new string.
+function thirteen(){
+    let myStr = prompt("Masukkan satu kata!");
+    let myStrArr = myStr.split('');
+    let ind = prompt("Masukkan Index yang Ingin Dihapus");
+    let newStr = myStr.replace(myStrArr[ind], '');
+    alert('String Barunya adalah: '+newStr);
+
+}
+
+// Write a JavaScript program to create a new string from a given string changing the position of first and last characters. The string length must be greater than or equal to 1
+function fourteen(){
+    let myStr = prompt("Masukkan satu kata!");
+    let myStrArr = myStr.split('');
+    if (myStrArr.length < 2){
+        alert("Masukkan minimal 2 huruf!");
+    } else {
+        let temp = myStrArr[myStrArr.length-1];
+        myStrArr[myStrArr.length-1] = myStrArr[0];
+        myStrArr[0] = temp;
+        // let a = myStr.replace(myStrArr[0], myStrArr[-1]);
+        // let b 
+        alert("Index awal dan akhir dibalik: "+myStrArr.join(""));
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
